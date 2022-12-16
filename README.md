@@ -18,6 +18,10 @@ To install execute:
 To check installation:
 > rws
 
+Note: you may build almost any rust project by updating 
+spec like this. As an example this template is used for 
+building Rust TLS Server.
+
 ## Community
 Use GitHub discussions, issues and pull requests.
 
