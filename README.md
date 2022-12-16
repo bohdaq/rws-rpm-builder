@@ -15,6 +15,9 @@ Check RPM package at RPMS/x86_64 folder.
 To install execute:
 > sudo rpm -i --force rws-_YOUR_VERSION_.rpm
 
+To check installation:
+> rws
+
 ## Community
 Use GitHub discussions, issues and pull requests.
 
@@ -31,4 +34,5 @@ If you appreciate my work and want to support it, feel free to do it via [PayPal
 1. [http-to-https-letsencrypt](https://github.com/bohdaq/rust-http-to-https-letsencrypt-acme)
 1. [Rust Web Framework](https://github.com/bohdaq/rust-web-framework/)
 1. [Create Debian Package](https://github.com/bohdaq/rws-create-deb)
-1. [Homebrew Formula](https://github.com/bohdaq/homebrew-rust-tls-server)
+1. [Homebrew Formula Rust TLS Server](https://github.com/bohdaq/homebrew-rust-tls-server)
+1. [Homebrew Formula Rust Web Server](https://github.com/bohdaq/homebrew-rust-web-server)
