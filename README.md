@@ -1,11 +1,20 @@
 # RPM builder for Rust Web Server
-You'll need to use Rust v1.65+.
+You'll need to install rustup nightly:
+> rustup toolchain install nightly
 
-1. Update [spec](SPECS/rws.spec) accordingly.
-1. Download source tarball from Releases or Tags page.
-1. Unpack and create new source tarball named as per 
-[spec](SPECS/rws.spec) _name_-_version_.tar.gz with Cargo.toml 
-at the directory root level.
+Steps to build:
+- Update rust toolchain
+> rustup update
+- Update [spec](SPECS/rws.spec) accordingly to requirements
+- Download source tarball from Releases or Tags page
+- Unpack source tarball
+> tar -xvf rust-web-server-_version_.tar.gz
+- Rename folder
+> mv rust-web-server-_version_ rws-_version_
+- Create new source tarball
+> tar -czvf rws-_version_.tar.gz rws-_version_/
+- Copy created tarball to SOURCES folder
+> cp rws-_version_.tar.gz _path-to-sources_/SOURCES/
 
 To build execute:
 > rpmbuild -v -bb --clean SPECS/rws.spec
