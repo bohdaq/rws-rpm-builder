@@ -1,7 +1,7 @@
-%define _topdir    /home/bohdaq/rws-rpm-builder
+%define _topdir    /home/bohdan_tsap/git/rws-rpm-builder
 %define name       rws
 %define release    0
-%define version    0.0.28
+%define version    9.0.0
 %define buildroot  %{_topdir}/%{name}-%{version}-root
 
 BuildRoot:         %{buildroot}
@@ -15,7 +15,9 @@ Prefix:            /usr
 Group:             Development/Tools
 
 %description
-rust-web-server (rws) is a simple web-server written in Rust. The rws server can serve static content inside the directory it is started.
+rust-web-server (rws) is a simple web-server written in Rust.
+
+%global debug_package %{nil}
 
 %prep
 %setup -q
@@ -25,9 +27,9 @@ cargo test
 
 %install
 rustup override set nightly
-cargo build -Zunstable-options --release  --out-dir $RPM_BUILD_ROOT/usr/local/bin
+cargo build -Zunstable-options --release  --out-dir $RPM_BUILD_ROOT/usr/bin
 
 %files
 %defattr(-, root, root)
-/usr/local/bin/rws
+/usr/bin/rws
 
