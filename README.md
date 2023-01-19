@@ -24,12 +24,12 @@ Check RPM package at RPMS/x86_64 folder.
 To install execute:
 > sudo rpm -i --force rws-_YOUR_VERSION_.rpm
 
+Note: if you have older version of rws installed, you may need to remove it manually by executing:
+> sudo rm /usr/bin/local/rws
+
 To check installation:
 > rws
 
-Note: you may build almost any rust project by updating 
-spec like this. As an example this template is used for 
-building Rust TLS Server.
 
 ## Community
 Use GitHub discussions, issues and pull requests.
